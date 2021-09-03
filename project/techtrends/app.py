@@ -2,21 +2,31 @@ import sqlite3
 
 from flask import Flask, jsonify, json, render_template, request, url_for, redirect, flash
 from werkzeug.exceptions import abort
+from werkzeug.wrappers import response
+import logging
 
 # Function to get a database connection.
 # This function connects to database with the name `database.db`
 def get_db_connection():
+    get_db_connection.counter+=1
     connection = sqlite3.connect('database.db')
     connection.row_factory = sqlite3.Row
     return connection
+
+#Counter to count the number of times get_dp_connection is called.
+get_db_connection.counter = 0
 
 # Function to get a post using its ID
 def get_post(post_id):
     connection = get_db_connection()
     post = connection.execute('SELECT * FROM posts WHERE id = ?',
                         (post_id,)).fetchone()
+    
+    
     connection.close()
     return post
+
+
 
 # Define the Flask application
 app = Flask(__name__)
@@ -27,9 +37,11 @@ app.config['SECRET_KEY'] = 'your secret key'
 def index():
     connection = get_db_connection()
     posts = connection.execute('SELECT * FROM posts').fetchall()
+    index.count = len(posts)
     connection.close()
     return render_template('index.html', posts=posts)
 
+index.count = 0
 # Define how each individual article is rendered 
 # If the post ID is not found a 404 page is shown
 @app.route('/<int:post_id>')
@@ -65,6 +77,30 @@ def create():
 
     return render_template('create.html')
 
+#the Health checkpoint.
+@app.route("/healthz")
+def health():
+    response = app.response_class(
+        response = json.dumps({"result":"OK - Healthy"}),
+        status = 200,
+        mimetype= 'application/json'
+    )
+
+    app.logger.info('Healthz request successfull')
+    return response
+
+#Metrics Checkpoint
+@app.route("/metrics")
+def metrics():
+    
+    response = app.response_class(
+        response = json.dumps({"post_count":index.count ,"db_connection_count":get_db_connection.counter}),
+        status = 200,
+        mimetype= 'application/json'
+    )
+    return response
+
 # start the application on port 3111
 if __name__ == "__main__":
-   app.run(host='0.0.0.0', port='3111')
+    logging.basicConfig(filename = "app.log", level=logging.DEBUG, force = True)
+    app.run(host='0.0.0.0', port='3111')

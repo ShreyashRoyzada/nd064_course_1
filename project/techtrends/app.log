@@ -1,0 +1,18 @@
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.43.237:3111/ (Press CTRL+C to quit)
+INFO:werkzeug:192.168.43.237 - - [03/Sep/2021 23:29:25] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:192.168.43.237 - - [03/Sep/2021 23:29:25] "GET /static/css/main.css HTTP/1.1" 200 -
+INFO:werkzeug:192.168.43.237 - - [03/Sep/2021 23:29:25] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.43.237 - - [03/Sep/2021 23:29:29] "GET /1 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.43.237 - - [03/Sep/2021 23:29:29] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.43.237 - - [03/Sep/2021 23:29:41] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:192.168.43.237 - - [03/Sep/2021 23:29:41] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.43.237 - - [03/Sep/2021 23:29:49] "GET /metrics HTTP/1.1" 200 -
+INFO:werkzeug:192.168.43.237 - - [03/Sep/2021 23:29:59] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:192.168.43.237 - - [03/Sep/2021 23:29:59] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.43.237 - - [03/Sep/2021 23:30:01] "GET /metrics HTTP/1.1" 200 -
+INFO:werkzeug:192.168.43.237 - - [03/Sep/2021 23:30:08] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:192.168.43.237 - - [03/Sep/2021 23:30:08] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:app:Healthz request successfull
+INFO:werkzeug:192.168.43.237 - - [03/Sep/2021 23:30:15] "GET /healthz HTTP/1.1" 200 -
