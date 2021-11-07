@@ -3,7 +3,22 @@ import sqlite3
 from flask import Flask, jsonify, json, render_template, request, url_for, redirect, flash
 from werkzeug.exceptions import abort
 from werkzeug.wrappers import response
+from datetime import datetime
 import logging
+import sys
+# Function for Logging
+
+def logmessage(message, code = 0):
+    '''
+    code 0 : Normal Log
+    code 1: Error Log
+    Default is 0
+    '''
+    time = datetime.now().strftime("%m/%d/%Y, %H:%M:%S")
+    if code == 0:
+        app.logger.info('{time} | {message}'.format(time=time, message=message))
+    else:
+        app.logger.error('{time} | {message}'.format(time=time, message=message))
 
 # Function to get a database connection.
 # This function connects to database with the name `database.db`
@@ -48,13 +63,17 @@ index.count = 0
 def post(post_id):
     post = get_post(post_id)
     if post is None:
+      logmessage('Article id no. "{id}" doesn\'t exist!'.format(id = post_id), 1)
       return render_template('404.html'), 404
     else:
+      title = post['title']
+      logmessage('Article "{title}" retrieved!'.format(title = title))
       return render_template('post.html', post=post)
 
 # Define the About Us page
 @app.route('/about')
 def about():
+    logmessage('About US page retrived!')
     return render_template('about.html')
 
 # Define the post creation functionality 
@@ -72,6 +91,7 @@ def create():
                          (title, content))
             connection.commit()
             connection.close()
+            logmessage('A new article, with title: "{title}" created!'.format(title = title))
 
             return redirect(url_for('index'))
 
@@ -102,5 +122,9 @@ def metrics():
 
 # start the application on port 3111
 if __name__ == "__main__":
-    logging.basicConfig(filename = "app.log", level=logging.DEBUG, force = True)
+    file = logging.FileHandler('app.log')
+    streamout = logging.StreamHandler(sys.stdout)
+    streamerr = logging.StreamHandler(sys.stderr)
+    handlers = [streamerr,streamout,file]
+    logging.basicConfig(handlers = handlers, level=logging.DEBUG)
     app.run(host='0.0.0.0', port='3111')

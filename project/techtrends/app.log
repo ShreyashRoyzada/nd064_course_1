@@ -16,3 +16,69 @@ INFO:werkzeug:192.168.43.237 - - [03/Sep/2021 23:30:08] "GET / HTTP/1.1" 200 -
 INFO:werkzeug:192.168.43.237 - - [03/Sep/2021 23:30:08] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
 INFO:app:Healthz request successfull
 INFO:werkzeug:192.168.43.237 - - [03/Sep/2021 23:30:15] "GET /healthz HTTP/1.1" 200 -
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.43.237:3111/ (Press CTRL+C to quit)
+INFO:werkzeug:192.168.43.237 - - [04/Sep/2021 01:20:29] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:192.168.43.237 - - [04/Sep/2021 01:20:29] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.43.237 - - [04/Sep/2021 01:20:40] "GET /metrics HTTP/1.1" 200 -
+INFO:werkzeug:192.168.43.237 - - [04/Sep/2021 01:20:45] "GET /create HTTP/1.1" 200 -
+INFO:werkzeug:192.168.43.237 - - [04/Sep/2021 01:20:46] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.43.237 - - [04/Sep/2021 01:21:09] "[32mPOST /create HTTP/1.1[0m" 302 -
+INFO:werkzeug:192.168.43.237 - - [04/Sep/2021 01:21:09] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:192.168.43.237 - - [04/Sep/2021 01:21:09] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.43.237 - - [04/Sep/2021 01:21:14] "GET /metrics HTTP/1.1" 200 -
+INFO:werkzeug:192.168.43.237 - - [04/Sep/2021 01:21:23] "GET /7 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.43.237 - - [04/Sep/2021 01:21:23] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.43.237 - - [04/Sep/2021 01:21:26] "GET /about HTTP/1.1" 200 -
+INFO:werkzeug:192.168.43.237 - - [04/Sep/2021 01:21:26] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.43.237 - - [04/Sep/2021 01:21:29] "GET /metrics HTTP/1.1" 200 -
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.0.5:3111/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [01/Nov/2021 10:59:06] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Nov/2021 10:59:08] "GET /static/css/main.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Nov/2021 10:59:09] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:app:Healthz request successfull
+INFO:werkzeug:127.0.0.1 - - [01/Nov/2021 10:59:21] "GET /healthz HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Nov/2021 11:00:02] "GET /metrics HTTP/1.1" 200 -
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.251.51:3111/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2021 21:03:00] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2021 21:03:02] "GET /static/css/main.css HTTP/1.1" 200 -
+INFO:app:11/06/2021, 21:03:17 | Article "2020 CNCF Annual Report" retrieved!
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2021 21:03:17] "GET /1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2021 21:03:18] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2021 21:03:29] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2021 21:03:30] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:app:11/06/2021, 21:03:32 | Article "KubeCon + CloudNativeCon 2021" retrieved!
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2021 21:03:32] "GET /2 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2021 21:03:32] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:app:Healthz request successfull
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2021 21:03:41] "GET /healthz HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2021 21:03:57] "GET /metrics HTTP/1.1" 200 -
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.43.237:3111/ (Press CTRL+C to quit)
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.43.237:3111/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2021 23:53:43] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2021 23:53:45] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:app:11/06/2021, 23:53:48 | Article "2020 CNCF Annual Report" retrieved!
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2021 23:53:48] "GET /1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2021 23:53:49] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.43.237:3111/ (Press CTRL+C to quit)
+INFO:app:11/06/2021, 23:57:01 | Article "2020 CNCF Annual Report" retrieved!
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2021 23:57:01] "GET /1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2021 23:57:02] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2021 23:57:18] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2021 23:57:18] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:app:11/06/2021, 23:57:25 | About US page retrived!
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2021 23:57:25] "GET /about HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2021 23:57:25] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2021 23:57:35] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2021 23:57:36] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
