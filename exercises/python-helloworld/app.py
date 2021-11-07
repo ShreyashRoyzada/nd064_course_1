@@ -13,7 +13,7 @@ def hello():
 @app.route("/status")
 def health():
     response = app.response_class(
-        response = json.dumps({"result": "OK - healthy"}),
+        response =  json.dumps({"result": "OK - healthy"}),
         status = 200,
         mimetype = 'application/json'
     )
