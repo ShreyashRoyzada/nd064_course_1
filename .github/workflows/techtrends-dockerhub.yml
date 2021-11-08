@@ -32,4 +32,4 @@ jobs:
           file: ./project/techtrends/dockerfile
           platforms: linux/amd64
           push: true
-          tags: techtrends:latest
+          tags: shreyashakhil/techtrends:latest
