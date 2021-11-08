@@ -4,8 +4,9 @@ LABEL maintainer = "ShreyashRoyzada"
 WORKDIR /app
 
 COPY . /app
-RUM pip install --upgrade pip
-RUN pip install -r requirements.txt
+RUN pip install --upgrade pip
+
+RUN pip install -r ./project/techtrends/requirements.txt
 
 RUN python init_db.py
 
