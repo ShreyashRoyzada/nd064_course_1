@@ -4,6 +4,7 @@ LABEL maintainer = "ShreyashRoyzada"
 WORKDIR /app
 
 COPY . /app
+
 RUN pip install --upgrade pip
 
 RUN pip install -r ./project/techtrends/requirements.txt
