@@ -9,8 +9,8 @@ RUN pip install --upgrade pip
 
 RUN pip install -r ./project/techtrends/requirements.txt
 
-RUN python init_db.py
+RUN python ./project/techtrends/__init__.py
 
 EXPOSE 3111
 
-CMD ["python","app.py"]
+CMD ["python","./project/techtrends/app.py"]
